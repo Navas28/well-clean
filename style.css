@@ -16,6 +16,10 @@
 nav{
     height: 100px;
     display: flex;
+    /* position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0; */
     justify-content: space-between;
     align-items: center;
     background-color:var(--bg-primary); 
@@ -58,6 +62,153 @@ nav .menu-btn i{
     display: none;
 }
 
+/* -----------------------------------------Slider--------------------------- */
+
+.slider-container{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;  
+    position: relative; 
+}
+.slider-wrapper .slider-item{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.slider-wrapper .slider-item::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("image/sofa-1.avif");
+}
+.slider-wrapper .slider-item:nth-child(2)::before{
+    background-image: url("image/mattress-1.jpg");
+}
+.slider-wrapper .slider-item:nth-child(3)::before{
+    background-image: url("image/carpet-3.jpg");
+}
+.slider-wrapper .slider-item:nth-child(4)::before{
+    background-image: url("image/lock-clean-1.jpg");
+}
+.slider-wrapper .slider-item:nth-child(5)::before{
+    background-image: url("image/tank.jpg");
+}
+
+.slider-wrapper .slider-item .slide-content{
+    color: #000;
+    opacity: 0;
+    z-index: 20;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 20px 10px;
+    max-width: 1400px;
+}
+.slider-item.swiper-slide-active .slide-content{
+    animation: animate-opacity 0.8s 0.6s linear forwards;
+}
+
+@keyframes animate-opacity{
+    100%{
+        opacity: 1;
+    }
+}
+.slider-wrapper .slider-item .slide-content > * {
+    max-width: 35%;
+}
+.slider-item .slide-content .slide-subtitle{
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0;
+    transform: translateY(60%);
+}
+.slider-item .slide-content .slide-title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 5px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(60%);
+}
+.slider-item.swiper-slide-active :where(.slide-subtitle, .slide-title){
+    animation: animate-text 0.6s 0.6s linear forwards;
+}
+
+@keyframes animate-text{
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.slider-item .slide-content .slide-description{
+    margin-top: 25px;
+    line-height: 25px;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(60%);
+}
+.slider-item.swiper-slide-active .slide-description{
+    animation: animate-text 0.6s 1s linear forwards;
+}
+.slider-item .slide-content .slide-button{
+    color: #000;
+    display: block;
+    opacity: 0;
+    margin-top: 45px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #000;
+    width: 0px;
+    padding: 13px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: 0.5s ease;
+    white-space: nowrap;
+}
+.slider-item .slide-content .slide-button span{
+    opacity: 0;
+}
+.slider-item.swiper-slide-active .slide-button span{
+    animation: animate-opacity 0.6s 1.5s linear forwards;
+}
+.slider-item.swiper-slide-active .slide-button{
+    animation: animate-button 0.6s 1.3s linear forwards;
+}
+@keyframes animate-button{
+    100%{
+        opacity: 1;
+        width: 250px;
+    }
+}
+.slider-item .slide-content .slide-button:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+
+/*--------------------------------------Media------------------------------------ */
+
+@media (max-width: 1536px){
+    .slider-wrapper .slider-item .slide-content  {
+        width: 85%;
+    }
+}
+@media (max-width: 1024px){
+    .slider-wrapper .slider-item .slide-content > * {
+        max-width: 100%;
+    }
+}
 @media (max-width: 940px){
     nav .menu-btn i{
         display: block;
@@ -72,6 +223,7 @@ nav .menu-btn i{
         background: var(--bg-secondary);
         height: 100vh;
         width: 100%;
+        z-index: 100;
         display: block;
         text-align: center;
         transition: all 0.3s ease;
@@ -93,3 +245,11 @@ nav .menu-btn i{
     background: none;
 }
 }
+@media (max-width: 768px){
+    .slider-wrapper .slider-item .slide-content > * {
+        max-width: 100%;
+    }
+}
+
+
+
