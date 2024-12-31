@@ -293,15 +293,15 @@ nav .menu-btn i{
 }
 .service-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     width: 100%;
+    row-gap: 30px;
     padding: 0 20px;
 }
 .card {
     margin: 0 auto;
     width: 100%;
-    max-width: 350px;
+    max-width: 380px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
