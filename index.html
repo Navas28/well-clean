@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>Home</title>
 </head>
 <body>
@@ -21,8 +21,8 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#service">Service</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -80,8 +80,8 @@
                 <h1>Professional Cleaning <br> You Can Trust</h1>
                 <p>At Well Clean, we specialize in delivering top-notch cleaning solutions for sofas, mattresses, glass surfaces, water tanks, bathrooms, and interlock areas. Our team of skilled professionals uses high-quality cleaning products and advanced techniques to ensure a spotless finish every time. With a commitment to excellence, we guarantee exceptional results at an affordable price, making us the preferred choice for all your cleaning needs.</p>
                 <div class="btn">
-                    <button type="button">Our team</button>
-                    <button type="button" class="btn2">Contact</button>
+                    <a href="#location" class="btn1">Location</a>
+                    <a href="#contact" class="btn2">Contact</a>
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@
 
     <!---------------------------------------------Location------------------------>
 
-    <section class="cities-section">
+    <section class="cities-section" id="location">
         <div class="cities-container">
             <div class="image-container">
                 <img src="image/kerala-loc.png" alt="City Illustration">
@@ -192,7 +192,7 @@
                 <h2>Cities We Serve</h2>
                 <div class="cities-list">
                     <div class="city-item">kannur</div>
-                    <div class="city-item">Calicut</div>
+                    <div class="city-item">Kozhikode</div>
                     <div class="city-item">Wayanad</div>
                     <div class="city-item">Malappuram</div>
                     <div class="city-item">Ernakulam</div>
@@ -212,7 +212,7 @@
                         <p>I had both my interlock driveway and sofa cleaned by. them Their team was professional and thorough with both services.excellent service</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="image/rivew-rose.jpg" alt="John Doe">
+                        <img src="image/rivew-rose.jpg" alt="Arathi">
                         <div class="author-info">
                             <h4>Arathi</h4>
                             <p>Calicut</p>
@@ -225,7 +225,7 @@
                         <p>Their services are not only excellent but also very affordable. I was pleasantly surprised by the reasonable pricing for such high-quality cleaning work</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="image/rivew-A.png" alt="Jane Smith">
+                        <img src="image/rivew-A.png" alt="Akhil">
                         <div class="author-info">
                             <h4>Akhil</h4>
                             <p>Wayanad</p>
@@ -238,10 +238,23 @@
                         <p>The water tank cleaning service was exceptional. They thoroughly cleaned and sanitized our tank, giving us peace of mind about our water quality.</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="image/review-car.jpg" alt="Mike Johnson">
+                        <img src="image/review-car.jpg" alt="Shyam">
                         <div class="author-info">
                             <h4>Shyam</h4>
                             <p>Ernakulam</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I was impressed by the thoroughness of the sofa cleaning service. They removed all the stains and made my sofa look brand new.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="image/review-r.webp" alt="Rahul">
+                        <div class="author-info">
+                            <h4>Rahul</h4>
+                            <p>Kannur</p>
                         </div>
                     </div>
                 </div>
@@ -249,7 +262,175 @@
         </div>
     </section>
     
-  
+    <!-------------------------------Contact------------------------------------>
+
+    <section class="contact">
+        <p>Get in touch</p>
+        <h1>Share our location</h1>
+        
+        <div class="contact-info">
+            <div class="contact-items">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="content">
+                    <h3>Office address</h3>
+                    <p>23 / 456 , Calicut - 6700</p>
+                </div>
+            </div>
+
+            <div class="contact-items">
+                <i class="fas fa-phone"></i>
+                <div class="content">
+                    <h3>Telephone number</h3>
+                    <p>+91 987655673210</p>
+                </div>
+            </div>
+
+            <div class="contact-items">
+                <i class="fas fa-envelope"></i>
+                <div class="content">
+                    <h3>Mail address</h3>
+                    <p>wellclean@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------contact form -------------------------------->
+
+    <section class="contact-container" id="contact">
+        <div class="contact-header">
+            <h2>Get in Touch</h2>
+            <p>Let us know how we can help with your cleaning needs</p>
+        </div>
+    
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="a42db1ca-3700-4d4e-a5f7-f1ca57f2b12a">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email Address (optional)</label>
+                    <input type="email" id="email" name="email"  placeholder="abc@gmail.com">
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+91">
+                </div>
+    
+                <div class="form-group">
+                    <label for="service">Service Required</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="residential">Sofa Cleaning</option>
+                        <option value="commercial">Carpet Cleaning</option>
+                        <option value="deep">Deep Cleaning</option>
+                        <option value="window">Glass Cleaning</option>
+                        <option value="carpet">Bathroom Cleaning</option>
+                        <option value="carpet">Mattress Cleaning</option>
+                        <option value="carpet">Water Tank Cleaning</option>
+                        <option value="carpet">Interlock Cleaning</option>
+                    </select>
+                </div>
+    
+                <div class="form-group form-full-width">
+                    <label for="address">Property Address</label>
+                    <input type="text" id="address" name="address" required placeholder="123 Street, City, State, Pincode">
+                </div>
+    
+                <div class="form-group form-full-width">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your specific cleaning needs..."></textarea>
+                </div>
+            </div>
+    
+            <button type="submit" class="submit-btn">Request a Quote</button>
+        </form>
+        
+    </section>
+
+    <!-----------------------------------Footer------------------------------------>
+
+    <footer class="footer">
+        <div class="footer-content footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="image/logo-1-Photoroom.png" alt="Sparkling Clean Logo" class="footer-logo">
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 987655673210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>wellclean@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>23 / 456 , Medical College<br>Calicut - 6700</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-heading">Professional Services</h3>
+                    <ul class="services-list">
+                        <li><a href="#"><i class="fas fa-check"></i> Sofa Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Carpet Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Glass Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Deep Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Mattress Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Water tank Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Interlock Cleaning</a></li>
+                        <li><a href="#"><i class="fas fa-check"></i> Bathroom Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Service Locations</h3>
+                    <ul class="locations-list">
+                        <li><i class="fa-solid fa-location-dot"></i> Kannur</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Kozhikode</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Wayanad</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Malappuram</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Ernakulam</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">&copy; 2024 Well Clean. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
