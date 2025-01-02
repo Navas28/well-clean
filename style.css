@@ -355,6 +355,13 @@ nav .menu-btn i{
     padding-right: 40px; 
     color: #000;
 }
+.card button a{
+    text-decoration: none;
+    color: #fff;
+}
+.card button a:hover{
+    color: #000;
+}
 .card button .fa-arrow-right {
     position: absolute;
     right: 10px;

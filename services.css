@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --bg-primary:#0A223D;
+    --bg-secondary:#0B283D;
+    --bg-box-1:#005577;
+    --bg-box-2:#FEC260;
+}
+body{
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* -----------------------Navbar---------------------- */
+nav{
+    height: 100px;
+    display: flex;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color:transparent; 
+    padding: 0px 50px 0px 0px;
+}
+.logo img{
+    width: 350px;
+    height: 180px;
+    padding-top: 15px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0px 50px;
+}
+nav ul li a{
+    color: var(--bg-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: "poppins", serif;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color:var(--bg-primary);
+    background: #fff;
+}
+nav .menu-btn i{
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+
+
+/* -----------------------Sofa Services---------------------- */
+
+.sofa-services {
+    padding: 50px 20px;
+}
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 30px;
+    margin-top: 80px;
+}
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.video-container {
+    flex: 1;
+    max-width: 50%;
+}
+.video-container video {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.content-container {
+    flex: 1;
+    padding: 20px;
+}
+.content-container h2 {
+    font-family: "jost", serif;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+.content-container p {
+    line-height: 1.6;
+    font-family: 'jost', sans-serif;
+    letter-spacing: 1px;
+}
+.image-gallery {
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ------------------Media Query---------------------- */
+@media (max-width: 940px){
+    nav {
+        padding: 0 20px;
+    }
+    nav .menu-btn i {
+        display: block;
+        color: var(--bg-primary);
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: rgba(255, 255, 255, 0.95);
+        height: 100vh;
+        width: 100%;
+        z-index: 100;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul {
+        left: 0;
+    }
+    nav ul li {
+        margin: 30px 0;
+    }
+    nav ul li a{
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: block;
+        color: var(--bg-primary);
+    }
+    nav ul li a:hover,
+    nav ul li a.active{
+        color: var(--bg-primary);
+        font-weight: 600;
+        background: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .video-container {
+        max-width: 100%;
+        width: 600px;
+    }
+    
+    .video-container video {
+        height: 250px;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 15px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+    
+    .gallery-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
