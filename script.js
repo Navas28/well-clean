@@ -1,3 +1,17 @@
+//     Close Navbar on click
+
+document.addEventListener('DOMContentLoaded', function() {
+    const checkbox = document.getElementById('click');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            checkbox.checked = false; 
+        });
+    });
+});
+
 //       Initialize Swiper
 
 const swiper = new Swiper(".slider-container", {
@@ -31,3 +45,4 @@ const testimonialSwiper = new Swiper('.testimonial-slider', {
         }
     }
 });
+

@@ -21,7 +21,7 @@ nav{
     height: 100px;
     display: flex;
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     left: 0;
     right: 0;
     justify-content: space-between;
@@ -30,9 +30,10 @@ nav{
     padding: 0px 50px 0px 0px;
 }
 .logo img{
-    width: 350px;
-    height: 180px;
-    padding-top: 15px;
+    width: 250px;
+    height: 150px;
+    padding-top: 30px;
+    padding-left: 40px;
 }
 nav ul{
     display: flex;
@@ -58,9 +59,20 @@ nav ul li a.active{
     background: #fff;
 }
 nav .menu-btn i{
-    color: #fff;
+    color: var(--bg-primary);
     font-size: 1.4rem;
     cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 999;
+}
+#click:checked ~ .menu-btn .menu-icon{
+    display: none;
+}
+#click:checked ~ .menu-btn .close-icon{
+    display: block;
+}
+nav .menu-btn i.close-icon{
     display: none;
 }
 #click{
@@ -68,7 +80,7 @@ nav .menu-btn i{
 }
 
 
-/* -----------------------Sofa Services---------------------- */
+/* ----------------------- Services---------------------- */
 
 .sofa-services {
     padding: 50px 20px;
@@ -136,23 +148,32 @@ nav .menu-btn i{
 
 
 /* ------------------Media Query---------------------- */
+
 @media (max-width: 940px){
     nav {
         padding: 0 20px;
+        justify-content: space-between;
     }
     nav .menu-btn i {
         display: block;
         color: var(--bg-primary);
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     nav ul {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: -100%;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         height: 100vh;
         width: 100%;
-        z-index: 100;
-        display: block;
+        z-index: 998;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         transition: all 0.3s ease;
     }
