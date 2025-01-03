@@ -575,7 +575,6 @@ nav .menu-btn i.close-icon{
     padding: 40px 20px;
     background: linear-gradient(to right, #000428, #004e92);
     border-radius: 10px;
-
 }
 .contact h1 {
     text-align: center;
@@ -589,7 +588,7 @@ nav .menu-btn i.close-icon{
     color:#fff;
     font-size: 1.2em;
     margin-bottom: 0px;
-    font-family: 'jost',sans-serif  ;
+    font-family: 'jost',sans-serif;
 }
 .contact-info {
     display: flex;
@@ -621,7 +620,7 @@ nav .menu-btn i.close-icon{
 .contact-items .content p {
     color: #fff;
     font-size: 1em;
-    font-family: 'jost',sans-serif  ;
+    font-family: 'jost',sans-serif;
 }
 
 /* ----------------------------------------Form------------------------------------ */
@@ -884,6 +883,12 @@ nav .menu-btn i.close-icon{
     nav ul li a {
         font-size: 1rem;
     }
+    .contact {
+        max-width: 95%;
+    }
+    .contact h1 {
+        font-size: 2em;
+    }
 }
 
 
@@ -896,7 +901,18 @@ nav .menu-btn i.close-icon{
         flex-direction: column;
         text-align: center;
     }
+    .cities-container {
+        max-width: 90%;
+        gap: 20px;
+    }
+    .text-container h2 {
+        font-size: 2rem;
+    }
+    .city-item {
+        padding: 15px 25px;
+    }
 }
+
 
 @media (max-width: 940px){
     nav {
@@ -1010,6 +1026,21 @@ nav .menu-btn i.close-icon{
         text-align: center;
         gap: 15px;
     }
+    .contact {
+        padding: 30px 15px;
+    }
+    .contact h1 {
+        font-size: 1.8em;
+    }
+    .contact > p {
+        font-size: 1em;
+    }
+    .contact-info {
+        gap: 40px;
+    }
+    .contact-items {
+        min-width: 300px;
+    }
 }
 @media (max-width: 650px){
     .about .main img{
@@ -1041,6 +1072,20 @@ nav .menu-btn i.close-icon{
     }
     .testimonial-card {
         padding: 20px;
+    }
+    .contact h1 {
+        font-size: 1.5em;
+    }
+    .contact-items {
+        min-width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-items .content h3 {
+        font-size: 1.1em;
+    }
+    .contact-items .content p {
+        font-size: 0.9em;
     }
 }
 
