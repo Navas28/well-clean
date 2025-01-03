@@ -448,8 +448,7 @@ nav .menu-btn i.close-icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px 20px;
-    min-height: 100vh;
+    padding: 0px 20px;
 }
 .cities-container {
     display: flex;
