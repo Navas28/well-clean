@@ -120,6 +120,7 @@ nav .menu-btn i.close-icon{
     font-family: 'jost', sans-serif;
     letter-spacing: 1px;
 }
+
 .image-gallery {
     padding: 50px 20px;
     display: grid;
@@ -149,6 +150,21 @@ nav .menu-btn i.close-icon{
 
 /* ------------------Media Query---------------------- */
 
+@media  (max-width: 1200px) {
+    .service-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .video-container {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .video-container video {
+        height: 350px;
+    }
+}
 @media (max-width: 940px){
     nav {
         padding: 0 20px;
