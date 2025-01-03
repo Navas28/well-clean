@@ -480,15 +480,17 @@ nav .menu-btn i.close-icon{
 .cities-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
+    justify-content: center;
 }
 .city-item {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'jost' ,sans-serif;
-    padding: 20px 32px;
-    font-size: 1rem;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-width: auto;
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
@@ -903,12 +905,18 @@ nav .menu-btn i.close-icon{
     .cities-container {
         max-width: 90%;
         gap: 20px;
+        padding: 20px 0;
     }
     .text-container h2 {
         font-size: 2rem;
+    } 
+    .cities-list {
+        gap: 12px;
+        justify-content: center;
     }
     .city-item {
-        padding: 15px 25px;
+        padding: 12px 20px;
+        font-size: 0.95rem;
     }
 }
 
@@ -992,6 +1000,21 @@ nav .menu-btn i.close-icon{
     .cities-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .image-container{
+        width: 100%;
+        max-width: 400px;
+    }
+    .cities-list{
+        gap: 8px;
+        width: 100%;
+    }
+    .city-item{
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        flex: 0 1 auto
     }
     .image-container,
     .text-container {
